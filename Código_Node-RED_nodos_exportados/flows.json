@@ -1,0 +1,2574 @@
+[
+    {
+        "id": "28e3632a9cb92ca3",
+        "type": "tab",
+        "label": "Sala acuarelas",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3a76e3d59f476117",
+        "type": "tab",
+        "label": "Sala fotografias",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "789de2ca14d76707",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#786930",
+                "baseFont": "Century Gothic,CenturyGothic,AppleGothic,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#786930",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#786930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#af9946",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#786930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Century Gothic,CenturyGothic,AppleGothic,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "99ae17ed4bae4959",
+        "type": "MySQLdatabase",
+        "name": "basedatos_tfg",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "basedatos_tfg",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "b610f29e50343f81",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4ff679b9a3e45e6e",
+        "type": "telegram bot",
+        "botname": "alertas_museobot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "6727f88876040fe1",
+        "type": "ui_tab",
+        "name": "Sala Acuarelas",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7709b0bc03783238",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a9e65d3664c982b7",
+        "type": "serial-port",
+        "serialport": "COM6",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "c90fd7cc78e04763",
+        "type": "ui_tab",
+        "name": "Sala de fotografías",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3e9fe7c3b2ff154e",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "6727f88876040fe1",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "70f7cbbcde84dd8c",
+        "type": "ui_group",
+        "name": "Humedad",
+        "tab": "6727f88876040fe1",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d7c459694774c526",
+        "type": "ui_group",
+        "name": "Iluminacion",
+        "tab": "6727f88876040fe1",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d104873278d460a1",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "c90fd7cc78e04763",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "428401584be2d722",
+        "type": "ui_group",
+        "name": "Humedad",
+        "tab": "c90fd7cc78e04763",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "333e0ba169710263",
+        "type": "ui_group",
+        "name": "CO",
+        "tab": "c90fd7cc78e04763",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "838641d460be3577",
+        "type": "ui_group",
+        "name": "CO2",
+        "tab": "c90fd7cc78e04763",
+        "order": 5,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6f1a8844710f26f8",
+        "type": "ui_group",
+        "name": "Iluminacion",
+        "tab": "c90fd7cc78e04763",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "70f2fd64fc850511",
+        "type": "ui_group",
+        "name": "CO",
+        "tab": "6727f88876040fe1",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "50d39e247b38de16",
+        "type": "ui_group",
+        "name": "CO2",
+        "tab": "6727f88876040fe1",
+        "order": 5,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09c39a4ffc4c6b55",
+        "type": "serial in",
+        "z": "28e3632a9cb92ca3",
+        "name": "Placa arduino",
+        "serial": "b610f29e50343f81",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "72d59a51e4c39f4b"
+            ]
+        ]
+    },
+    {
+        "id": "b10136b132464ef5",
+        "type": "mysql",
+        "z": "28e3632a9cb92ca3",
+        "mydb": "99ae17ed4bae4959",
+        "name": "BaseDatos",
+        "x": 1110,
+        "y": 500,
+        "wires": [
+            [
+                "be7da8d35535d8bc"
+            ]
+        ]
+    },
+    {
+        "id": "06738892d3f1688c",
+        "type": "debug",
+        "z": "28e3632a9cb92ca3",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "72d59a51e4c39f4b",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "lectura de datos de arduino",
+        "func": "var datos = msg.payload.trim();\nvar lectura = JSON.parse(datos);\nmsg.lectura = lectura;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "06738892d3f1688c",
+                "901ba6c848f4d250",
+                "107f329a9e7d81e1",
+                "03b52c6b96183cc3",
+                "49554895732888f4",
+                "d389041e5eaf3fc5",
+                "e1bd3548d5e991fd",
+                "297453c202c68549",
+                "478a84d36a0a4a54",
+                "e170176d82ca13d1",
+                "dde4e2e3113bdd34",
+                "d249e01d439a3f67",
+                "2f434a6c59153602",
+                "6cb9f3db60a2162c",
+                "1f3df14b05f9ac06",
+                "6914a49a98ed7e09",
+                "bed91458b00abd9e"
+            ]
+        ]
+    },
+    {
+        "id": "290a74f67466dc8a",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Insertar datos en BBDD",
+        "func": "var contador = flow.get('number');\n//msg.count = contador += 1;\nflow.set('number', msg.count);\n\n//let now = new Date().toISOString().slice(0, 19).replace('T', ' ');\n\nvar today = new Date();\nvar now = today.getTime();\n\nvar count = msg.payload[0].lastId +1;\n\nvar queryinsert = \"INSERT INTO LecturaSensores(idLectura,idSala,fecha, temperatura, humedad, luz, CO2, CO) VALUES(\" + count + \", \" + 1 + \", \" + now + \", \" + msg.lectura.temperatura + \", \" + msg.lectura.humedad + \",\" + msg.lectura.iluminacion + \",\" + msg.lectura.CO +\",\" + msg.lectura.CO2 + \")\";\n\nmsg.topic = queryinsert;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "5c4950cb5209ce2c",
+                "d007170d021c5490",
+                "0dbad89413b00355",
+                "22ea1801cdbb6ffc",
+                "b10136b132464ef5",
+                "a2fafd87ea4e92cb",
+                "528fa2a081a6a60d"
+            ]
+        ]
+    },
+    {
+        "id": "901ba6c848f4d250",
+        "type": "ui_gauge",
+        "z": "28e3632a9cb92ca3",
+        "name": "Temperatura",
+        "group": "3e9fe7c3b2ff154e",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Temperatura",
+        "label": "grados",
+        "format": "{{msg.lectura.temperatura}}",
+        "min": "18",
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 750,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "27427fc82cf6403a",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Dashboard mostrar valores",
+        "info": "",
+        "x": 870,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "449ff8ba4e5a5fd1",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Leer de arduino datos de los sensores",
+        "info": "",
+        "x": 210,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "107f329a9e7d81e1",
+        "type": "ui_gauge",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "70f7cbbcde84dd8c",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Humedad ",
+        "label": "% de humedad",
+        "format": "{{msg.lectura.humedad}}",
+        "min": 0,
+        "max": "90",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 720,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c66fc91a97c91579",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Insertar datos en BBDD",
+        "info": "",
+        "x": 920,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "be7da8d35535d8bc",
+        "type": "debug",
+        "z": "28e3632a9cb92ca3",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5c4950cb5209ce2c",
+        "type": "debug",
+        "z": "28e3632a9cb92ca3",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "03b52c6b96183cc3",
+        "type": "ui_gauge",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "d7c459694774c526",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "donut",
+        "title": "Iluminacion ",
+        "label": "lux",
+        "format": "{{msg.lectura.iluminacion}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2d65113eb68e05c7",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Sacar última PK",
+        "info": "",
+        "x": 680,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "49554895732888f4",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "ultima PK",
+        "func": "//Selecccionamos el maxId\nvar query = \"SELECT MAX(idLectura) as lastId FROM LecturaSensores\";\nmsg.topic = query;\n\nmsg.lastId = msg.payload[0].lastId;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 480,
+        "wires": [
+            [
+                "4ff856d7b3b26e06"
+            ]
+        ]
+    },
+    {
+        "id": "4ff856d7b3b26e06",
+        "type": "mysql",
+        "z": "28e3632a9cb92ca3",
+        "mydb": "99ae17ed4bae4959",
+        "name": "BaseDatos",
+        "x": 690,
+        "y": 560,
+        "wires": [
+            [
+                "290a74f67466dc8a"
+            ]
+        ]
+    },
+    {
+        "id": "fa412bf779aad95d",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "CHATID:943904021",
+        "info": "",
+        "x": 1470,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "1304c3356d11b996",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Bot Telegram",
+        "info": "",
+        "x": 1470,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d007170d021c5490",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta temperatura sensibilidad A",
+        "func": "//Lógica de las alertas: \n//Dependen de los materiales que haya en la sala\n//Materiales de sensibilidad alta:\n//Temperatura: Entre 18 a 22 ºC con variaciones del +-1.5ºC\n//Humedad: 45% al 65% con variaciones del 3ºC.\n//Iluminacion: 50 lux y 150klux.hs/año.\n\n\n\n\nif (msg.lectura.temperatura > 22 ) {\n      msg.sendTelegram = \"La temperatura supera el umbral en la Sala de Acuarelas\";\n}else if(msg.lectura.temperatura < 18){\n    msg.sendTelegram = \"La temperatura está por debajo del umbral en la Sala de Acuarelas\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 620,
+        "wires": [
+            [
+                "bf2d867cd9328fa9"
+            ]
+        ]
+    },
+    {
+        "id": "bf2d867cd9328fa9",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta Temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1490,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d014c6b98a1e3aef",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta Humedad",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1480,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e89ef1265d2462ad",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta Iluminacion",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1490,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "519ca953b3291ebf",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Generación de alertas",
+        "info": "",
+        "x": 1180,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "0dbad89413b00355",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta humedad sensibilidad A",
+        "func": "//Lógica de las alertas: \n//Dependen de los materiales que haya en la sala\n//Materiales de sensibilidad alta:\n//Temperatura: Entre 18 a 22 ºC con variaciones del +-1.5ºC\n//Humedad: 45% al 65% con variaciones del 3ºC.\n//Iluminacion: 50 lux y 150klux.hs/año.\n\nif (msg.lectura.humedad > 65 ) {\n      msg.sendTelegram = \"La humedadad supera el umbral en la Sala de Acuarelas\";\n}else if(msg.lectura.humedad > 45 ) {\n    msg.sendTelegram = \"La humedad está por debajo del umbral en la Sala de Acuarelas\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 660,
+        "wires": [
+            [
+                "d014c6b98a1e3aef"
+            ]
+        ]
+    },
+    {
+        "id": "22ea1801cdbb6ffc",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta iluminacion sensibilidad A",
+        "func": "//Lógica de las alertas: \n//Dependen de los materiales que haya en la sala\n//Materiales de sensibilidad alta:\n//Temperatura: Entre 18 a 22 ºC con variaciones del +-1.5ºC\n//Humedad: 45% al 65% con variaciones del 3ºC.\n//Iluminacion: 50 lux y 150klux.hs/año.\n\nif (msg.lectura.iluminacion > 50 ) {\n      msg.sendTelegram = \"La iluminación supera el umbralen la Sala de acuarelas\";\n}else if(msg.lectura.iluminacion < 10){\n    msg.sendTelegram = \"La iluminación está por debajo del umbral en la Sala de acuarelas\";\n}\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 700,
+        "wires": [
+            [
+                "e89ef1265d2462ad"
+            ]
+        ]
+    },
+    {
+        "id": "d6131732bc8c3a8b",
+        "type": "ui_chart",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "3e9fe7c3b2ff154e",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "Temperatura (ºC)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d389041e5eaf3fc5",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "function 5",
+        "func": "msg.payload = msg.lectura.temperatura\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 80,
+        "wires": [
+            [
+                "d6131732bc8c3a8b"
+            ]
+        ]
+    },
+    {
+        "id": "3ad0ca67a823b32b",
+        "type": "inject",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "d389041e5eaf3fc5",
+                "e1bd3548d5e991fd",
+                "297453c202c68549",
+                "dde4e2e3113bdd34",
+                "d249e01d439a3f67"
+            ]
+        ]
+    },
+    {
+        "id": "e1bd3548d5e991fd",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "function 6",
+        "func": "msg.payload = msg.lectura.humedad;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 140,
+        "wires": [
+            [
+                "45403f15967ae358"
+            ]
+        ]
+    },
+    {
+        "id": "45403f15967ae358",
+        "type": "ui_chart",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "70f7cbbcde84dd8c",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "Humedad (%)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1120,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "297453c202c68549",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "function 7",
+        "func": "msg.payload = msg.lectura.iluminacion;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 200,
+        "wires": [
+            [
+                "ddcd42ab66767077"
+            ]
+        ]
+    },
+    {
+        "id": "ddcd42ab66767077",
+        "type": "ui_chart",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "d7c459694774c526",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "Iluminacion (lux)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "2000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1120,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "478a84d36a0a4a54",
+        "type": "ui_gauge",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "70f2fd64fc850511",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "CO",
+        "label": "ppm",
+        "format": "{{msg.lectura.CO}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "dde4e2e3113bdd34",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "function 9",
+        "func": "msg.payload = msg.lectura.CO;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 260,
+        "wires": [
+            [
+                "a91f4cd969a1d30e"
+            ]
+        ]
+    },
+    {
+        "id": "a91f4cd969a1d30e",
+        "type": "ui_chart",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "70f2fd64fc850511",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "CO (ppm)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1060,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d249e01d439a3f67",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "function 10",
+        "func": "msg.payload = msg.lectura.CO2;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 300,
+        "wires": [
+            [
+                "c902297714ce20a1"
+            ]
+        ]
+    },
+    {
+        "id": "c902297714ce20a1",
+        "type": "ui_chart",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "50d39e247b38de16",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "CO2 (ppm)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "2000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1110,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e170176d82ca13d1",
+        "type": "ui_gauge",
+        "z": "28e3632a9cb92ca3",
+        "name": "",
+        "group": "50d39e247b38de16",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "CO2 ",
+        "label": "ppm",
+        "format": "{{msg.lectura.CO2}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 710,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3e0694e6c36a7b96",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Fecha en tiempo real",
+        "info": "Fecha en tiempo real utitilizada\npara mostrar los valores en la Dashboard",
+        "x": 480,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a659d157f4a3f057",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta CO",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1460,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a096c1306198994c",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta CO2",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1470,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2fafd87ea4e92cb",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta CO sensibilidad A",
+        "func": "//El índice de calidad del aire(ICA)\n//Verde: Buena para la salud(ICA de 0 a 50)\n//Amarillo: Moderada(ICA de 51 a 100)\n//Naranja: Dañina a la salud para grupos sensibles(ICA de 101 a 150)\n//Rojo: Dañina a la salud(ICA 151 a 200)\n//Morado: Muy dañina a la salud(ICA 201 a 300)\n//Marrón: Peligrosa(ICA superior a 300)\n\nif (msg.lectura.CO > 50 ) {\n      msg.sendTelegram = \"Los niveles de CO superan el umbral en la Sala de acuarelas\";\n}else if(msg.lectura.CO < 10){\n    msg.sendTelegram = \"Los niveles de CO  están por debajo del umbral en la Sala de acuarelas\";\n}\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 760,
+        "wires": [
+            [
+                "a659d157f4a3f057"
+            ]
+        ]
+    },
+    {
+        "id": "528fa2a081a6a60d",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta CO2 sensibilidad A",
+        "func": "//Esta categorización identifica el aire de mala calidad\n //a partir de 1200 ppm(partes por millón)\n //considerados como el nivel máximo recomendado de CO2 \n //en ambientes interiores: Hasta 350 ppm: \n //calidad de aire interior alta.\n//Entre 350 y 500 ppm: calidad de aire interior buena.\n\n\nif (msg.lectura.CO2 > 500 ) {\n      msg.sendTelegram = \"Los niveles de CO2 superan el umbral en la Sala de acuarelas\";\n}else if(msg.lectura.CO2 < 350){\n    msg.sendTelegram = \"Los niveles de CO2  están por debajo del umbral en la Sala de acuarelas\";\n}\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 840,
+        "wires": [
+            [
+                "a096c1306198994c"
+            ]
+        ]
+    },
+    {
+        "id": "5a54f431cfcd4081",
+        "type": "debug",
+        "z": "28e3632a9cb92ca3",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2f434a6c59153602",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.lectura.temperatura == null ) {\n      msg.sendTelegram = \"El sensor de temperatura no funciona correctamente\";\n}\n\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 520,
+        "wires": [
+            [
+                "687951e0ea00a5c6"
+            ]
+        ]
+    },
+    {
+        "id": "687951e0ea00a5c6",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta sensor temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "5a54f431cfcd4081"
+            ]
+        ]
+    },
+    {
+        "id": "de6731cdee8bd3ee",
+        "type": "comment",
+        "z": "28e3632a9cb92ca3",
+        "name": "Fallos en la lectura de los sensores",
+        "info": "",
+        "x": 180,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "6cb9f3db60a2162c",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\n\nif (msg.lectura.humedad == null ) {\n      msg.sendTelegram = \"El sensor de humedad no funciona correctamente\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "76ce83c71c006dea"
+            ]
+        ]
+    },
+    {
+        "id": "76ce83c71c006dea",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta sensor temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f3df14b05f9ac06",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.lectura.iluminacion == null ) {\n      msg.sendTelegram = \"El sensor de iluminación no funciona correctamente\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 660,
+        "wires": [
+            [
+                "58d832505ff423a7"
+            ]
+        ]
+    },
+    {
+        "id": "6914a49a98ed7e09",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.lectura.CO == null ) {\n      msg.sendTelegram = \"El sensor de calidad de aire no funciona correctamente\";\n}\n\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "6a2c697426a01b16"
+            ]
+        ]
+    },
+    {
+        "id": "58d832505ff423a7",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta sensor temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a2c697426a01b16",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta sensor calidad de aire",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bed91458b00abd9e",
+        "type": "function",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.lectura.CO2 == null ) {\n      msg.sendTelegram = \"El sensor de calidad de aire no funciona correctamente\";\n}\n\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "ae7dd0fb29bb2554"
+            ]
+        ]
+    },
+    {
+        "id": "ae7dd0fb29bb2554",
+        "type": "telegram sender",
+        "z": "28e3632a9cb92ca3",
+        "name": "Alerta sensor calidad de aire",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f74649cfc81a4b44",
+        "type": "mqtt in",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "topic": "datosSensores/sala2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "7709b0bc03783238",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "1159d01cfbcc0b1f",
+                "743bf2dde4c56908"
+            ]
+        ]
+    },
+    {
+        "id": "1159d01cfbcc0b1f",
+        "type": "debug",
+        "z": "3a76e3d59f476117",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "365b47d0247755f8",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "ultima PK",
+        "func": "//Selecccionamos el maxId\nvar query = \"SELECT MAX(idLectura) as ultimaPK FROM LecturaSensores\";\nmsg.topic = query;\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 460,
+        "wires": [
+            [
+                "ca540507a85e0a8e"
+            ]
+        ]
+    },
+    {
+        "id": "ca540507a85e0a8e",
+        "type": "delay",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 700,
+        "y": 520,
+        "wires": [
+            [
+                "d729487ce00b2c8e"
+            ]
+        ]
+    },
+    {
+        "id": "d729487ce00b2c8e",
+        "type": "mysql",
+        "z": "3a76e3d59f476117",
+        "mydb": "99ae17ed4bae4959",
+        "name": "BaseDatos",
+        "x": 770,
+        "y": 580,
+        "wires": [
+            [
+                "4229b9f83196cfa3",
+                "06aefbd2786b3273"
+            ]
+        ]
+    },
+    {
+        "id": "06aefbd2786b3273",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Insertar datos en BBDD",
+        "func": "var contador = flow.get('number');\n//msg.count = contador += 1;\nflow.set('number', msg.count);\nmsg.pk = msg.payload[0].ultimaPK;\nvar today = new Date();\nvar now = today.getTime();\nvar count = msg.pk+1;\n\nvar queryinsert = \"INSERT INTO LecturaSensores(idLectura,idSala,fecha, temperatura, humedad, luz, CO2, CO) VALUES(\" + count + \", \" + 2 + \", \" + now + \", \" + msg.json.temperature + \", \" + msg.json.humidity + \",\" + msg.json.lux + ','+ msg.json.CO2 + ',' + msg.json.CO + \")\";\n\nmsg.topic = queryinsert;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 720,
+        "wires": [
+            [
+                "487f0f8fba51e803",
+                "742808bb8c036661",
+                "b3b9b5a9142b1afc",
+                "9c7256c9abfcdc09",
+                "47b87c7617c98110",
+                "141b6b71811a3f11",
+                "d1d9ea59e06ffb81"
+            ]
+        ]
+    },
+    {
+        "id": "487f0f8fba51e803",
+        "type": "mysql",
+        "z": "3a76e3d59f476117",
+        "mydb": "99ae17ed4bae4959",
+        "name": "BaseDatos",
+        "x": 830,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6e630f95e5d5c9d8",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Insertar datos en BBDD",
+        "info": "",
+        "x": 860,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "045628a6bc8d1ead",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Sacar última PK",
+        "info": "",
+        "x": 760,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "08ecda11deec1087",
+        "type": "ui_gauge",
+        "z": "3a76e3d59f476117",
+        "name": "Temperatura",
+        "group": "d104873278d460a1",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "Temperatura",
+        "label": "grados",
+        "format": "{{msg.json.temperature}}",
+        "min": 0,
+        "max": "45",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "09da287773c9d156",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Dashboard mostrar valores",
+        "info": "",
+        "x": 910,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "22149b7a762d1559",
+        "type": "ui_gauge",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "428401584be2d722",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "Humedad ",
+        "label": "% de humedad",
+        "format": "{{msg.json.humidity}}",
+        "min": 0,
+        "max": "90",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 760,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "62dd8261b663b79a",
+        "type": "ui_gauge",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "838641d460be3577",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "CO2 ",
+        "label": "ppm",
+        "format": "{{msg.json.CO2}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "db2ab550bf8fef4a",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "suscriptor MQTT",
+        "info": "",
+        "x": 180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "743bf2dde4c56908",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "cambiar variable",
+        "func": "msg.json = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "08ecda11deec1087",
+                "22149b7a762d1559",
+                "365b47d0247755f8",
+                "62dd8261b663b79a",
+                "16722b40c150e9fc",
+                "7f362d05231325b2",
+                "853bf6a2948700f5",
+                "b69ed3234552389e",
+                "a47d8be608591ff5",
+                "0f0f13f1e3e1dc5a",
+                "888951059e2cfe0f",
+                "ce73fe2e90eaa2d6",
+                "39d2becb4d8beb1e",
+                "64329907bc14f6c1",
+                "23638316324f1ff3",
+                "9aa25e4e50d048da"
+            ]
+        ]
+    },
+    {
+        "id": "8854e444621a909c",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Pasar de msg.paylaod a msg.json",
+        "info": "",
+        "x": 480,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "79ea075ca3f6ce16",
+        "type": "debug",
+        "z": "3a76e3d59f476117",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4229b9f83196cfa3",
+        "type": "debug",
+        "z": "3a76e3d59f476117",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "16722b40c150e9fc",
+        "type": "ui_gauge",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "333e0ba169710263",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "CO",
+        "label": "ppm",
+        "format": "{{msg.json.CO}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 770,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "742808bb8c036661",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta temperatura sensibilidad M",
+        "func": "//Lógica de las alertas: \n//Dependen de los materiales que haya en la sala\n//Materiales de sensibilidad media:\n//Temperatura: Entre 18 a 22 ºC con variaciones del +-1.5ºC\n//Humedad: 45% al 65% con variaciones del 3ºC.\n//Iluminacion: 50 lux y 150klux.hs/año.\n\n\n\n\nif (msg.json.temperature > 22 ) {\n      msg.sendTelegram = \"La temperatura supera el umbral en la Sala de fotografías\";\n} else if (msg.json.temperature < 18){\n    msg.sendTelegram = \"La temperatura está demasiado baja en la Sala de fotografías\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 600,
+        "wires": [
+            [
+                "394c5d66dd9ffe52"
+            ]
+        ]
+    },
+    {
+        "id": "394c5d66dd9ffe52",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta Temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1430,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "30680997e070dfcf",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta Humedad",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1460,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f1ec805aed70002",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta Iluminacion",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1430,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a58fcd75f5585efe",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Generación de alertas",
+        "info": "",
+        "x": 1120,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "b3b9b5a9142b1afc",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta humedad sensibilidad M",
+        "func": "//Lógica de las alertas: \n//Dependen de los materiales que haya en la sala\n//Materiales de sensibilidad media:\n//Temperatura: Entre 18 a 22 ºC con variaciones del +-1.5ºC\n//Humedad: 45% al 65% con variaciones del 3ºC.\n//Iluminacion: 50 lux y 150klux.hs/año.\n\nif (msg.json.humedad > 65 ) {\n    msg.sendTelegram = \"La humedadad supera el umbral en la Sala de fotografías\";\n} else if (msg.json.humedad > 45 ) {\n    msg.sendTelegram = \"La humedad está por debajo del umbral en la Sala de fotografías\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 640,
+        "wires": [
+            [
+                "30680997e070dfcf"
+            ]
+        ]
+    },
+    {
+        "id": "9c7256c9abfcdc09",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta iluminacion sensibilidad M",
+        "func": "//Lógica de las alertas: \n//Dependen de los materiales que haya en la sala\n//Materiales de sensibilidad media:\n//Temperatura: Entre 18 a 22 ºC con variaciones del +-1.5ºC\n//Humedad: 45% al 65% con variaciones del 3ºC.\n//Iluminacion: 159-200 lux.\n\nif (msg.json.lux > 200 ) {\n    msg.sendTelegram = \"La iluminación supera el umbral en la Sala de fotografías\";\n} else if (msg.json.lux < 150){\n    msg.sendTelegram = \"La iluminación está demasiado baja en la Sala de fotografías\";\n}\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 680,
+        "wires": [
+            [
+                "1f1ec805aed70002"
+            ]
+        ]
+    },
+    {
+        "id": "82c9d4eb40e98cf3",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "CHATID:943904021",
+        "info": "",
+        "x": 1430,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "205a1ced83d2e501",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Bot Telegram",
+        "info": "",
+        "x": 1430,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "f15901d7b5441417",
+        "type": "ui_chart",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "d104873278d460a1",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "Temperatura (ºC)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1150,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f362d05231325b2",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "function 1",
+        "func": "msg.payload = msg.json.temperature;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 140,
+        "wires": [
+            [
+                "f15901d7b5441417"
+            ]
+        ]
+    },
+    {
+        "id": "9439cc9d100dd915",
+        "type": "inject",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "7f362d05231325b2",
+                "853bf6a2948700f5",
+                "b69ed3234552389e",
+                "a47d8be608591ff5",
+                "888951059e2cfe0f"
+            ]
+        ]
+    },
+    {
+        "id": "853bf6a2948700f5",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "function 2",
+        "func": "msg.payload = msg.json.humidity;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 180,
+        "wires": [
+            [
+                "9e23c8447428bc86"
+            ]
+        ]
+    },
+    {
+        "id": "9e23c8447428bc86",
+        "type": "ui_chart",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "428401584be2d722",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "Humedad (%)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b69ed3234552389e",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "function 3",
+        "func": "msg.payload = msg.json.CO2;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 240,
+        "wires": [
+            [
+                "d3a7faefa79d3204"
+            ]
+        ]
+    },
+    {
+        "id": "d3a7faefa79d3204",
+        "type": "ui_chart",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "838641d460be3577",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "CO2 (ppm)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "2000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c44beaefa1d7dde",
+        "type": "ui_chart",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "333e0ba169710263",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "CO (ppm)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "2000",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1160,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a47d8be608591ff5",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "function 4",
+        "func": "msg.payload = msg.json.CO2;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "4c44beaefa1d7dde"
+            ]
+        ]
+    },
+    {
+        "id": "0f0f13f1e3e1dc5a",
+        "type": "ui_gauge",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "6f1a8844710f26f8",
+        "order": 1,
+        "width": 8,
+        "height": 6,
+        "gtype": "donut",
+        "title": "Iluminacion",
+        "label": "ppm",
+        "format": "{{msg.json.lux}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 750,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "888951059e2cfe0f",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "function 8",
+        "func": "msg.payload = msg.json.lux;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "0fd627df3c4559b8"
+            ]
+        ]
+    },
+    {
+        "id": "0fd627df3c4559b8",
+        "type": "ui_chart",
+        "z": "3a76e3d59f476117",
+        "name": "",
+        "group": "6f1a8844710f26f8",
+        "order": 2,
+        "width": 8,
+        "height": 6,
+        "label": "Iluminacion (lux)",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1140,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a79b72650825a7a",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Fecha en tiempo real",
+        "info": "Fecha en tiempo real utitilizada\npara mostrar los valores en la Dashboard",
+        "x": 460,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "47b87c7617c98110",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta CO sensibilidad M",
+        "func": "//El índice de calidad del aire(ICA)\n//Verde: Buena para la salud(ICA de 0 a 50)\n//Amarillo: Moderada(ICA de 51 a 100)\n//Naranja: Dañina a la salud para grupos sensibles(ICA de 101 a 150)\n//Rojo: Dañina a la salud(ICA 151 a 200)\n//Morado: Muy dañina a la salud(ICA 201 a 300)\n//Marrón: Peligrosa(ICA superior a 300)\n\nif (msg.json.CO >  100) {\n    msg.sendTelegram = \"La iluminación supera el umbral en la Sala de fotografías\";\n} else if (msg.json.CO < 0){\n    msg.sendTelegram = \"La iluminación está demasiado baja en la Sala de fotografías\";\n}\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 720,
+        "wires": [
+            [
+                "a83f9b1232a2e646"
+            ]
+        ]
+    },
+    {
+        "id": "141b6b71811a3f11",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta CO2 sensibilidad M",
+        "func": "//Esta categorización identifica el aire de mala calidad\n //a partir de 1200 ppm(partes por millón)\n //considerados como el nivel máximo recomendado de CO2\n //en ambientes interiores: Hasta 350 ppm:\n //calidad de aire interior alta.\n//Entre 350 y 500 ppm: calidad de aire interior buena.\n\nif (msg.json.iluminacion > 200 ) {\n    msg.sendTelegram = \"La iluminación supera el umbral en la Sala de fotografías\";\n} else if (msg.json.iluminacion < 150){\n    msg.sendTelegram = \"La iluminación está demasiado baja en la Sala de fotografías\";\n}\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 760,
+        "wires": [
+            [
+                "e825c1a5d60ea3bf"
+            ]
+        ]
+    },
+    {
+        "id": "a83f9b1232a2e646",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta CO",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1380,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e825c1a5d60ea3bf",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta CO2",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1410,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce73fe2e90eaa2d6",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.json.temperature == null ) {\n      msg.sendTelegram = \"El sensor de temperatura no funciona correctamente\";\n}\n\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 660,
+        "wires": [
+            [
+                "21d78b17346f0061"
+            ]
+        ]
+    },
+    {
+        "id": "21d78b17346f0061",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta sensor temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 680,
+        "wires": [
+            [
+                "79ea075ca3f6ce16"
+            ]
+        ]
+    },
+    {
+        "id": "cd9c4b253e21659d",
+        "type": "comment",
+        "z": "3a76e3d59f476117",
+        "name": "Fallos en la lectura de los sensores",
+        "info": "",
+        "x": 200,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "39d2becb4d8beb1e",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\n\nif (msg.json.humidity == null ) {\n      msg.sendTelegram = \"El sensor de humedad no funciona correctamente\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 740,
+        "wires": [
+            [
+                "9e3eb9974d38cdfb"
+            ]
+        ]
+    },
+    {
+        "id": "9e3eb9974d38cdfb",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta sensor temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64329907bc14f6c1",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.json.lux == null ) {\n      msg.sendTelegram = \"El sensor de iluminación no funciona correctamente\";\n}\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 820,
+        "wires": [
+            [
+                "c6cf039783098fe6"
+            ]
+        ]
+    },
+    {
+        "id": "23638316324f1ff3",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.json.CO == null ) {\n      msg.sendTelegram = \"El sensor de calidad de aire no funciona correctamente\";\n}\n\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 880,
+        "wires": [
+            [
+                "a3dc11e87edf61eb"
+            ]
+        ]
+    },
+    {
+        "id": "c6cf039783098fe6",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta sensor temperatura",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a3dc11e87edf61eb",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta sensor calidad de aire",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9aa25e4e50d048da",
+        "type": "function",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta fallo en la lectura de los datos",
+        "func": "\n\n\nif (msg.json.CO2 == null ) {\n      msg.sendTelegram = \"El sensor de calidad de aire no funciona correctamente\";\n}\n\n\n\n\nmsg.payload = {\n    chatId: 943904021,\n    type: \"message\",\n    content: msg.sendTelegram\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 960,
+        "wires": [
+            [
+                "0014e39dc083b88b"
+            ]
+        ]
+    },
+    {
+        "id": "0014e39dc083b88b",
+        "type": "telegram sender",
+        "z": "3a76e3d59f476117",
+        "name": "Alerta sensor calidad de aire",
+        "bot": "4ff679b9a3e45e6e",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1d9ea59e06ffb81",
+        "type": "debug",
+        "z": "3a76e3d59f476117",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 880,
+        "wires": []
+    }
+]
